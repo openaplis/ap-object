@@ -1,7 +1,9 @@
-var cmdBuilder = require('ap-mysql').cmdBuilder
-var cmdSubmitter = require('ap-mysql').cmdSubmitter
+const deepDiff = require('deep-diff')
+const cmdBuilder = require('ap-mysql').cmdBuilder
+const cmdSubmitter = require('ap-mysql').cmdSubmitter
 
-module.exports.update = (ao, clone, callback) => {
+module.exports.update = (ao, aoClone, callback) => {
+  var diff = deepDiff(aoClone, ao)
   cmdBuilder.buildUpdateCommands(diff, ao, function (err, statements) {
     //cmdSubmitter.submit(statements[0].cmd)
     console.log(statements)

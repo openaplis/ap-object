@@ -1,21 +1,22 @@
 var ObjectId = require('bson-objectid')
 var moment = require('moment')
 
-exports = module.exports = {
-  TaskOrder: function create (pso, so) {
-    var objectId = ObjectId().toString()
-    return {
-      ObjectId: objectId,
-      TaskOrderId: objectId,
-      MasterAccessionNo: pso.MasterAccessionNo,
-      ReportNo: pso.ReportNo,
-      PanelSetName: pso.PanelSetName,
-      TaskName: 'Breast Fixation Check',
-      OrderDate: moment().format('YYYY-MM-DD HH:mm:ss'),
-      OrderedById: 5134,
-      OrderedByInitials: 'OP'
-    }
+module.exports.create = (pso, callback) => {
+  var objectId = ObjectId().toString()
+
+  var taskOrder = {
+    ObjectId: objectId,
+    TaskOrderId: objectId,
+    MasterAccessionNo: pso.MasterAccessionNo,
+    ReportNo: pso.ReportNo,
+    PanelSetName: pso.PanelSetName,
+    TaskName: 'Breast Fixation Check',
+    OrderDate: moment().format('YYYY-MM-DD HH:mm:ss'),
+    OrderedById: 5134,
+    OrderedByInitials: 'OP'
   }
+  
+  callback(null, taskOrder)
 }
 
 /*
