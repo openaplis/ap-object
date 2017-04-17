@@ -2,7 +2,7 @@ const cmdSubmitter = require('ap-mysql').cmdSubmitter
 const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
-const aoBuilder = require(path.resolve('./src/core/aoBuilder'))
+const aoBuilder = require(path.resolve('./src/core/ao-builder'))
 
 var masterAccessionNo = '17-8171'
 var testDataRowsFilePath = 'testDataRows.' + masterAccessionNo + '.json'

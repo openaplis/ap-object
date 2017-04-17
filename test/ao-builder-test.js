@@ -1,7 +1,7 @@
 const assert = require('assert')
 const path = require('path')
 const cmdSubmitter = require('ap-mysql').cmdSubmitter
-const aoBuilder = require(path.resolve('./src/core/aoBuilder'))
+const aoBuilder = require(path.resolve('./src/core/ao-builder'))
 const fs = require('fs')
 const _ = require('lodash')
 
@@ -10,7 +10,7 @@ var testAO = null;
 describe('aoBuilder', function() {
 
   before(function(done) {
-    var testDataPath = path.resolve('./test/testDataRows.17-8171.json')
+    var testDataPath = path.resolve('./test/test-data-rows.17-8171.json')
     fs.readFile(testDataPath, function (err, data) {
       var rows = JSON.parse(data)
       aoBuilder.build(rows, function (err, ao) {
@@ -46,7 +46,7 @@ describe('aoBuilder', function() {
 
     it('PanelOrders.', function(done) {
       assert.equal(testAO.AccessionOrder.PanelSetOrders[1].PanelSetOrder.PanelOrders.length, 4, 'Number of PanelOrders on the second PanelSetOrder is not correct.')
-      assert.equal(testAO.AccessionOrder.PanelSetOrders[1].PanelSetOrder.PanelOrders[0].PanelOrder.PanelOrderId, '23', 'Number of PanelOrders on the second PanelSetOrder is not correct.')      
+      assert.equal(testAO.AccessionOrder.PanelSetOrders[1].PanelSetOrder.PanelOrders[0].PanelOrder.PanelOrderId, '23', 'Number of PanelOrders on the second PanelSetOrder is not correct.')
       done()
     })
 

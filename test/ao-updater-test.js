@@ -3,8 +3,8 @@ const path = require('path')
 const clone = require('clone')
 const deepDiff = require('deep-diff')
 
-const aoRetriever = require(path.resolve('./src/core/aoRetriever'))
-const aoUpdater = require(path.resolve('./src/core/aoUpdater'))
+const aoRetriever = require(path.resolve('./src/core/ao-retriever'))
+const aoUpdater = require(path.resolve('./src/core/ao-updater'))
 
 var masterAccessionNo = '17-16'
 
