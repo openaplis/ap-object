@@ -1,8 +1,7 @@
 'use strict'
 
 var cmdSubmitter = require('ap-mysql').cmdSubmitter
-var aoBuilder = require('./aoBuilder')
-
+var aoBuilder = require('./ao-builder')
 
 module.exports.retrieve = (masterAccessionNo, callback) => {
   var sql = 'Set @MasterAccessionNo = \'' + masterAccessionNo + '\'; CALL prcGetAccessionOrder(@MasterAccessionNo);'
