@@ -1,6 +1,6 @@
 {
   "name": "ap-object",
-  "version": "0.0.24",
+  "version": "0.0.28",
   "description": "Anatomic Pathology - Data Objects",
   "main": "src/index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/openaplis/ap-object#readme",
   "dependencies": {
-    "ap-mysql": "0.0.6",
+    "ap-mysql": "*",
     "bson-objectid": "^1.1.5",
     "moment": "^2.18.1"
   }
