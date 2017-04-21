@@ -1,13 +1,11 @@
 'use strict'
 
-const aoUpdater = require('./core/ao-updater')
-const aoBuilder = require('./core/ao-builder')
-const aoRetriever = require('./core/ao-retriever')
-const taskOrderCreator = require('./core/task-order-creator')
+const TaskOrder = require('./core/TaskOrder')
+const TaskOrderDetail = require('./core/TaskOrderDetail')
+const TaskBreastFixationCheck = require('./core/Task-Breast-Fixation-Check')
 
 exports = module.exports = {
-  aoUpdater: aoUpdater,
-  aoBuilder: aoBuilder,
-  aoRetriever: aoRetriever,
-  taskOrderCreator: taskOrderCreator
+  TaskOrder: TaskOrder,
+  TaskOrderDetail: TaskOrderDetail,
+  TaskBreastFixationCheck: TaskBreastFixationCheck
 }
