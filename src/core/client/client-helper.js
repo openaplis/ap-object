@@ -1,3 +1,5 @@
+'use strict'
+
 var ObjectId = require('bson-objectid')
 var moment = require('moment')
 var _ = require('lodash')
@@ -6,7 +8,7 @@ var path = require('path')
 
 var self = module.exports = {
 
-  getTestData: function (callback) {
+  getClientTestData: function (callback) {
     var clientTestDataPath = path.join(__dirname, 'client-test-data.json')
     fs.readFile(clientTestDataPath, function (err, data) {
       if(err) return callback(err)
