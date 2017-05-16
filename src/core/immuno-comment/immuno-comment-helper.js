@@ -9,7 +9,7 @@ var path = require('path')
 var self = module.exports = {
 
   getImmunoCommentTestData: function (callback) {
-    var immunoCommentTestDataPath = path.join(__dirname, 'immunoComment-test-data.json')
+    var immunoCommentTestDataPath = path.join(__dirname, 'immuno-comment-test-data.json')
     fs.readFile(immunoCommentTestDataPath, function (err, data) {
       if(err) return callback(err)
       var immunoComments = JSON.parse(data)
