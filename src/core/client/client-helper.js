@@ -15,6 +15,15 @@ var self = module.exports = {
       var clients = JSON.parse(data)
       callback(null, clients)
     })
-  }
+  },
+
+  getClientLocationTestData: function (callback) {
+    var clientTestDataPath = path.join(__dirname, 'client-test-data.json')
+    fs.readFile(clientTestDataPath, function (err, data) {
+      if(err) return callback(err)
+      var clients = JSON.parse(data)
+      callback(null, clients)
+    })
+  }  
 
 }
