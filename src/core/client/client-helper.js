@@ -1,3 +1,5 @@
+'use strict'
+
 var ObjectId = require('bson-objectid')
 var moment = require('moment')
 var _ = require('lodash')
